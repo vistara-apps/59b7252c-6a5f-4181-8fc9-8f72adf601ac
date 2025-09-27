@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "SleepTune",
+    "subtitle": "Built with Zara",
+    "description": "SleepTune is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://59b7252c6a5f41818fc98f72adf601ac-rrbq.vercel.app",
+    "splashImageUrl": "https://59b7252c6a5f41818fc98f72adf601ac-rrbq.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://59b7252c6a5f41818fc98f72adf601ac-rrbq.vercel.app/image.png",
+    "tagline": "SleepTune",
+    "screenshotUrls": [
+      "https://59b7252c6a5f41818fc98f72adf601ac-rrbq.vercel.app/screenshot.png",
+      "https://59b7252c6a5f41818fc98f72adf601ac-rrbq.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://59b7252c6a5f41818fc98f72adf601ac-rrbq.vercel.app/api/webhook"
+  }
+}
