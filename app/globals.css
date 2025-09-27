@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Sleep-themed color palette */
+  --color-bg: hsl(220 30% 8%);
+  --color-fg: hsl(220 15% 95%);
+  --color-accent: hsl(240 60% 70%);
+  --color-primary: hsl(260 80% 65%);
+  --color-surface: hsl(220 25% 12%);
+  --color-text-primary: hsl(220 10% 95%);
+  --color-text-secondary: hsl(220 15% 75%);
+  
+  /* Sleep theme variants */
+  --sleep-deep: hsl(220 40% 6%);
+  --sleep-dream: hsl(240 50% 15%);
+  --sleep-calm: hsl(260 30% 25%);
+  --sleep-glow: hsl(280 60% 80%);
+}
+
+/* Theme variants */
+[data-theme="celo"] {
+  --color-bg: hsl(0 0% 0%);
+  --color-fg: hsl(0 0% 100%);
+  --color-accent: hsl(45 100% 70%);
+  --color-primary: hsl(45 100% 60%);
+  --color-surface: hsl(0 0% 8%);
+  --color-text-primary: hsl(0 0% 100%);
+  --color-text-secondary: hsl(0 0% 80%);
+}
+
+[data-theme="solana"] {
+  --color-bg: hsl(260 30% 8%);
+  --color-fg: hsl(0 0% 100%);
+  --color-accent: hsl(300 70% 70%);
+  --color-primary: hsl(280 80% 65%);
+  --color-surface: hsl(260 25% 12%);
+  --color-text-primary: hsl(0 0% 100%);
+  --color-text-secondary: hsl(300 20% 80%);
+}
+
+[data-theme="base"] {
+  --color-bg: hsl(220 40% 8%);
+  --color-fg: hsl(220 15% 95%);
+  --color-accent: hsl(220 100% 50%);
+  --color-primary: hsl(220 100% 60%);
+  --color-surface: hsl(220 30% 12%);
+  --color-text-primary: hsl(220 10% 95%);
+  --color-text-secondary: hsl(220 20% 75%);
+}
+
+[data-theme="coinbase"] {
+  --color-bg: hsl(220 50% 6%);
+  --color-fg: hsl(220 15% 95%);
+  --color-accent: hsl(220 100% 50%);
+  --color-primary: hsl(220 100% 60%);
+  --color-surface: hsl(220 40% 10%);
+  --color-text-primary: hsl(220 10% 95%);
+  --color-text-secondary: hsl(220 20% 75%);
+}
+
+@layer base {
+  * {
+    @apply border-gray-700;
+  }
+  
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--sleep-deep) 100%);
+    min-height: 100vh;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface bg-opacity-40 backdrop-blur-sm border border-white border-opacity-10 rounded-2xl;
+  }
+  
+  .sleep-glow {
+    box-shadow: 0 0 30px hsla(280, 60%, 80%, 0.3);
+  }
+  
+  .habit-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .soundscape-wave {
+    background: linear-gradient(45deg, var(--color-accent), var(--color-primary));
+    background-size: 200% 200%;
+    animation: wave 4s ease-in-out infinite;
+  }
+  
+  @keyframes wave {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
